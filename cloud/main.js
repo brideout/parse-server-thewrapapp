@@ -28,7 +28,6 @@ Parse.Cloud.define("modifyuser", function(request, response){
       if(results.length>0){
         var user = results[0];
         user.set("SOMEPARAMETER",true);
-        user.save()
         }
       }
     }
