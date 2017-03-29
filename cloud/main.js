@@ -13,6 +13,7 @@ Parse.Cloud.define("updateExpDate", function(request, response){
         user.set("ExpirationDate",[request.params.ExpirationDate]);
         user.save(null, { useMasterKey: true }).then(
             function(result){
+              response.success();
             },
             function(error){
                 console.log("Error: " + error.code + " " + error.message);
