@@ -24,6 +24,12 @@ Parse.Cloud.define("modifyuser", function(request, response){
   var query = new Parse.Query(Parse.User);
   query.equalTo('objectId', request.params.objectId);
   query.find({
-    
+    useMasterKey: true,
+    success: function(results){
+      
+    },
+    error: function(error){
+            response.error('query error: '+ error.code + " : " + error.message);
+    }
   });
 });
