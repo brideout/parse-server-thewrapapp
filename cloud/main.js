@@ -17,6 +17,7 @@ Parse.Cloud.define("updateExpDate", function(request, response){
             },
             function(error){
                 console.log("Error: " + error.code + " " + error.message);
+              response.error('query error: '+ error.code + " : " + error.message);
             });
       }
     },
