@@ -11,7 +11,7 @@ Parse.Cloud.define("updateExpDate", function(request, response){
     success: function(results){
       if(results.length>0){
         var user = results[0];
-        user.set("ExpirationDate",request.params.ExpirationDate);
+        user.set("ExpirationDate2",request.params.ExpirationDate);
         user.save({useMasterKey: true}).then(
             function(result){
             },
