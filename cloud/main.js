@@ -29,7 +29,12 @@ Parse.Cloud.define("modifyuser", function(request, response){
       if(results.length>0){
         var user = results[0];
         user.set("SOMEPARAMETER",true);
-        user.save()
+        user.save().then(
+            function(result){
+            },
+            function(error){
+                console.log("Error: " + error.code + " " + error.message);
+            });
       }
     },
     error: function(error){
