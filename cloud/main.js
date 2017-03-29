@@ -25,10 +25,8 @@ Parse.Cloud.define("modifyuser", function(request, response){
   query.equalTo('objectId', request.params.objectId);
   query.find({
     success: function(results){
-      if(results.length>0){
         var user = results[0];
         user.set("SOMEPARAMETER",true);
-        }
       }
     }
   });
