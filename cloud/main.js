@@ -26,7 +26,8 @@ Parse.Cloud.define("modifyuser", function(request, response){
   query.find({
     useMasterKey: true,
     success: function(results){
-      
+      if(results.length>0){
+      }
     },
     error: function(error){
             response.error('query error: '+ error.code + " : " + error.message);
