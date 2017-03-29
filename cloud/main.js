@@ -7,7 +7,6 @@ Parse.Cloud.define("updateExpDate", function(request, response){
   var query = new Parse.Query(Parse.User);
   query.equalTo('customer_id', request.params.customerId);
   query.find({
-    useMasterKey: true,
     success: function(results){
       if(results.length>0){
         var user = results[0];
