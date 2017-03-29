@@ -27,6 +27,9 @@ Parse.Cloud.define("modifyuser", function(request, response){
     useMasterKey: true,
     success: function(results){
       if(results.length>0){
+        var user = results[0];
+        user.set("SOMEPARAMETER",true);
+        user.save()
       }
     },
     error: function(error){
