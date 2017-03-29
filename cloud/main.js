@@ -37,9 +37,6 @@ Parse.Cloud.define("modifyuser", function(request, response){
             });
         }
       }
-    },
-    error: function(error){
-            response.error('query error: '+ error.code + " : " + error.message);
     }
   });
 });
