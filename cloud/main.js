@@ -22,7 +22,6 @@ Parse.Cloud.define("averageStars", function(request, response) {
 
 Parse.Cloud.define("modifyuser", function(request, response){
   var query = new Parse.Query("Review");
-  query.equalTo('objectId', request.params.objectId);
   query.find({
     success: function(results){
         var user = results[0];
