@@ -5,14 +5,14 @@ var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var path = require('path');
 
-var databaseUri = 'mongodb://heroku_544zbqbh:v7ffhupf7ashd05tne27bcgv2m@ds157624.mlab.com:57624/heroku_544zbqbh';
+var databaseUri = 'mongodb://heroku_qh1r0w7w:4mdednr5ib0i9r12gp93mpggd4@ds025892-a0.mlab.com:25892,ds025892-a1.mlab.com:25892/heroku_qh1r0w7w?replicaSet=rs-ds025892';
 
 
 var api = new ParseServer({
   databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'genethix82ILndOi452Lkf38J24',
-  masterKey: process.env.MASTER_KEY || 'kdoiONewofkQPZ38Lm2N52kAS29', //Add your master key here. Keep it secret!
+  appId: process.env.APP_ID || 'thewrapappdlIeo58sl149jNeroU34',
+  masterKey: process.env.MASTER_KEY || 'kgfiW2955dPfkLKwnbe82', //Add your master key here. Keep it secret!
   serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
   enableAnonymousUsers: process.env.ANON_USERS || false,
   allowClientClassCreation: process.env.CLIENT_CLASS_CREATION || false,
