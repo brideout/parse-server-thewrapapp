@@ -5,7 +5,9 @@ var express = require('express');
 var ParseServer = require('parse-server').ParseServer;
 var path = require('path');
 
-var databaseUri = 'mongodb://test:test123@ds025892-a0.mlab.com:25892,ds025892-a1.mlab.com:25892/heroku_qh1r0w7w?replicaSet=rs-ds025892';
+//var databaseUri = 'mongodb://test:test123@ds025892-a0.mlab.com:25892,ds025892-a1.mlab.com:25892/heroku_qh1r0w7w?replicaSet=rs-ds025892';
+var databaseUri = 'mongodb://test:test123@iad2-c11-2.mongo.objectrocket.com:53470,iad2-c11-1.mongo.objectrocket.com:53470,iad2-c11-0.mongo.objectrocket.com:53470/heroku_qh1r0w7w?replicaSet=def1cd68b2034c3d9e0d65e850794f19&retryWrites=false'
+
 //var databaseUri = 'mongodb://heroku_qh1r0w7w:4mdednr5ib0i9r12gp93mpggd4@ds025892-a0.mlab.com:25892,ds025892-a1.mlab.com:25892/heroku_qh1r0w7w?replicaSet=rs-ds025892';
 //var databaseUri = 'mongodb+srv://heroku_qh1r0w7w:terb1406@herokuqh1r0w7w.vcucm.mongodb.net/heroku_qh1r0w7w?retryWrites=true&w=majority';
 
